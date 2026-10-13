@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -132,3 +133,97 @@ input {
 input:focus {
   outline: none;
   border-color: cornflowerblue;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+input:user-valid {
+  border-color: mediumseagreen;
+}
+
+/* SUBMIT BUTTON */
+
+button {
+  flex: 0 0 auto;
+
+  background-color: mediumseagreen;
+  color: white;
+
+  padding: 12px 36px;
+  border: none;
+  border-radius: 6px;
+  margin: 15px 0;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+  background-color: seagreen;
+}
+
+/* LOGIN TEXT */
+
+.log-in-para {
+  font-size: 0.75rem;
+  margin: 10px 0;
+}
+
+.log-in {
+  color: mediumseagreen;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.log-in:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer-para {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 10px;
+}
+
+/* SMALLER SCREENS */
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .image-side {
+    flex: none;
+    height: 300px;
+  }
+
+  .form-side {
+    padding: 40px 20px;
+  }
+
+  .form-side > p,
+  .form-side > form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-item {
+    flex-basis: 100%;
+  }
+
+  .form-side > p:first-child {
+    font-size: 1.25rem;
+  }
+}
